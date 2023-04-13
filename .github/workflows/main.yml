@@ -7,8 +7,8 @@
 name: CI-CD-Pipeline-to-AWS-ElasticBeanstalk
 
 env:
-  AWS_REGION                : "eu_central_1"                   # set this to your preferred AWS region, e.g. us-west-1
-  EB_PACKAGE_S3_BACKET_NAME : "S3"
+  AWS_REGION                : "eu-central-1"
+  EB_PACKAGE_S3_BACKET_NAME : "yura-flask-application-packages"
   EB_APPLICATION_NAME       : "MyFlask"
   EB-ENVIRONMENT_NAME       : "MyFlask-env"
   DEPLOY_PACKGE_NAME        : "flask_app_${{ github.sha }}.zip"
@@ -32,8 +32,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Login to Amazon ECR
