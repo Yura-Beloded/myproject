@@ -42,12 +42,12 @@ jobs:
 
 
 
-  my_cd_part:
-    runs-on: ubuntu-latest
+#  my_cd_part:
+#    runs-on: ubuntu-latest
 
 
 ###
-permissions:
-  contents: read
+# permissions:
+#  contents: read
 
 
