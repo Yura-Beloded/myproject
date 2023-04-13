@@ -1,7 +1,7 @@
 #--------------------------------------------
+#CI-CD-Pipeline-to-AWS-ElasticBeanstalk
 #
-#
-#
+#Copyleft by Yuriy Beloded 2023
 #--------------------------------------------
 
 name: CI-CD-Pipeline-to-AWS-ElasticBeanstalk
